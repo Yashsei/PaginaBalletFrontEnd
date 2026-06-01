@@ -3,23 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="/PaginaBalletFrontEnd/styles.css">
   <title>Inscripcion</title>
 </head>
-<script>
-    fetch('/PaginaBalletFrontEnd/header.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('header-placeholder').innerHTML = data);
-
-    fetch('/PaginaBalletFrontEnd/footer.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-</script>
 <body>
   <div id="header-placeholder"></div>
   <div class="forms">
     <h2>Inscribete a Grand jeté</h2>
-    <form action="../aviso.html" method="POST" name="formularioIngreso" enctype="multipart/form-data">
+    <form action="/PaginaBalletFrontEnd/aviso.html" method="POST" name="formularioIngreso" enctype="multipart/form-data">
       <p>Campos Obligatorios *</p>
       <div class="infoIzq">
         <h4>Nombre del Alumno *</h4>
@@ -64,7 +55,6 @@
 
   </div>
   <div id="footer-placeholder"></div>
-</body>
 <script>
   function enviar(){
       var form = document.formularioIngreso;
@@ -97,4 +87,14 @@
       form.submit();
     }
 </script>
+<script>
+    fetch('/PaginaBalletFrontEnd/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+    fetch('/PaginaBalletFrontEnd/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+</body>
 </html>
