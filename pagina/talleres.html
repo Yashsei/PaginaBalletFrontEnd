@@ -6,6 +6,15 @@
   <link rel="stylesheet" href="../styles.css">
   <title>Talleres</title>
 </head>
+<script>
+    fetch('../header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+    fetch('../footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
 <body>
   <div id="header-placeholder"></div>
   <div class="contTalleres">
@@ -50,14 +59,5 @@
     </table>
   </div>
   <div id="footer-placeholder"></div>
-  <script>
-    fetch('../pagina/header.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('header-placeholder').innerHTML = data);
-
-    fetch('../pagina/footer.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
-</script>
 </body>
 </html>
