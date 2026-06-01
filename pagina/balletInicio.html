@@ -10,7 +10,7 @@
   <div id="header-placeholder"></div>
   <div class="forms">
     <h2>Inscribete a Grand jeté</h2>
-    <form action="/PaginaBalletFrontEnd/aviso.html" method="POST" name="formularioIngreso" enctype="multipart/form-data">
+    <form name="formularioIngreso" enctype="multipart/form-data">
       <p>Campos Obligatorios *</p>
       <div class="infoIzq">
         <h4>Nombre del Alumno *</h4>
@@ -84,7 +84,7 @@
           form.telefono.focus();
           return;
       }
-      form.submit();
+      window.location.href = '/PaginaBalletFrontEnd/aviso.html';
     }
 </script>
 <script>
