@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Ballet Grand jeté</title>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div class="slide">
+    <br>
+    <div class="contInfoP">
+      <h1>Academia de Ballet en Merida</h1>
+      <h2>Grand jeté</h2>
+      <br>
+      <p>Bienvenidos a Grand Jeté, un espacio dedicado a la pasión y disciplina del ballet en el corazón de Mérida. Aquí, transformamos el movimiento en arte, ofreciendo una formación integral donde la técnica se fusiona con la expresión personal para que cada alumno alcance su máximo potencial en un entorno creativo y profesional.</p>
+      <a href="pagina/balletInicio.php">Inscripción</a>
+    </div>
+  </div>
+  <div class="contElementos1">
+    <h2>Nosotros</h2>
+    <div class="hrNos"></div>
+    <div class="contImagen">
+      <img src="img/grand-jete-site.jpg" alt="Movimiento Grand">
+    </div>
+    <div class="contTexto">
+      <p>En Grand Jeté, creemos que el ballet es más que una disciplina física; es un lenguaje del alma que trasciende fronteras. Nuestra academia en Mérida surge de la visión de fomentar la cultura dancística, integrando a bailarines de todas las edades en una comunidad basada en el respeto, la constancia y el amor por el escenario. Nos esforzamos por crear un ambiente seguro donde cada estudiante pueda descubrir su propia voz artística mientras domina las bases técnicas clásicas.
+      </p>
+      <br>
+      <p>Nuestra metodología se basa en la excelencia pedagógica y el compromiso con el desarrollo personal, asegurando que cada lección contribuya al crecimiento integral de nuestros alumnos dentro y fuera del salón de danza.</p>
+    </div>
+  </div>
+  <div class="contProgramas">
+    <div class="contTexto2">
+      <h3>Ballet</h3>
+      <img src="img/ballet.jpg" alt="Ballet">
+      <p>El ballet es la esencia de nuestra disciplina, donde la elegancia se encuentra con el rigor técnico. Nos enfocamos en perfeccionar cada movimiento clásico para alcanzar la gracia absoluta.
+      </p>
+    </div>
+    <div class="contTexto2">
+      <h3>Show Dans</h3>
+      <img src="img/showdans.webp" alt="Show Dans">
+      <p>El Show Dans es nuestra plataforma para la expresión creativa y el espectáculo, donde la energía y la puesta en escena cobran protagonismo absoluto. Aquí exploramos coreografías dinámicas que permiten a nuestros bailarines brillar con luz propia, destacando la versatilidad técnica mostrada.
+      </p>
+    </div>
+    <div class="contTexto2">
+      <h3>Competitive</h3>
+      <img src="img/competitive.webp" alt="Competitive">
+      <p>El área de Competitive está diseñada para bailarines con un alto nivel de exigencia, enfocada en la preparación de alto rendimiento para escenarios profesionales. Aquí potenciamos la técnica avanzada y la interpretación, reflejando el compromiso y disciplina que se observan al analizar el desempeño.
+      </p>
+    </div>
+    <div class="contTexto2">
+      <h3>Baby Dans</h3>
+      <img src="img/babydans.webp" alt="Baby Dans">
+      <p>El programa de Baby Dans está diseñado para introducir a los más pequeños en el maravilloso mundo del movimiento con juegos y ejercicios básicos de ritmo. Aquí fomentamos la coordinación temprana y el amor por el arte, creando experiencias fundamentales que se aprecian en la calidez y dedicación.
+      </p>
+    </div>
+  </div>
+  <div class="contElementos1">
+    <h2>Empieza a Aprender!</h2>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/DS2VMFKaTJo?si=1aFQnh6KKxxHyzEY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+  </div>
+  <div class="info">
+    <div class="foot1">
+        <h3>Programas</h3>
+        <p>Ballet</p>
+        <p>Show Dans</p>
+        <p>Competitive</p>
+        <p>Baby Dans</p>
+      </div>
+      <div class="foot1">
+        <h3>Talleres</h3>
+        <p>Aero Dans</p>
+        <p>Dans Coreography</p>
+      </div>
+      <div class="foot1">
+        <h3>Dirección</h3>
+        <p>Calle # Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+        <p>999 502 7153</p>
+      </div>
+  </div>
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+</body>
+</html>

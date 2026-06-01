@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Inscripcion</title>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+  <div class="forms">
+    <h2>Inscribete a Grand jeté</h2>
+    <form action="../datos/data.php" method="POST" name="formularioIngreso" enctype="multipart/form-data">
+      <p>Campos Obligatorios *</p>
+      <div class="infoIzq">
+        <h4>Nombre del Alumno *</h4>
+        <input type="text" placeholder="Tu nombre" name="nombre" class="elemento3" maxlength="50">
+        <h4>Edad</h4>
+        <input type="number" placeholder="Cantidad de años" class="elemento3" name="edad" maxlength="5">
+        <h4>Paquete Elegido *</h4>
+        <select name="paquete" id="paquete" class="elemento3">
+          <option value="">Selecciona el Paquete</option>
+          <option value="Ballet">Ballet</option>
+          <option value="Show Dans">Show Dans</option>
+          <option value="Competitive">Competitive</option>
+          <option value="Baby Dans">Baby Dans</option>
+        </select>
+        <h4>Horario</h4>
+        <p>Matutino</p>
+        <input type="radio" value="matutino" name="horario"class="elemento3">
+        <p>Vespertino</p>
+        <input type="radio" value="vespertino" name="horario" class="elemento3">
+        <br>
+      </div>
+      <div class="infoDer">
+        <h4>Número de Telefono *</h4>
+        <input type="tel" placeholder="999 999 999" class="elemento3" name="telefono" maxlength="10">
+        <br><br>
+        <h4>Talleres de Interes</h4>
+        <div class="contTaller">
+          <p class="elemento2">Aero Dans</p>
+          <input type="checkbox" name="taller" value="Aero Dans" class="elemento2">
+        </div>
+        <div class="contTaller">
+          <p class="elemento2">Dans Coreography</p>
+          <input type="checkbox" name="taller" value="Aero Dans" class="elemento2">
+        </div>
+        <br>
+        <h4>Foto del Alumno *</h4>
+        <input type="file" name="foto">
+        <p>SOLO Archivos en formato PNG/JPG/JEPG</p>
+      </div>
+      <button type="button" class="btn_enviar" onclick="enviar()">Enviar</button>
+    </form>
+
+  </div>
+  <div id="footer-placeholder"></div>
+</body>
+<script>
+  function enviar(){
+      var form = document.formularioIngreso;
+      if (form.nombre.value.trim().length === 0) {
+          alert("Escribe tu NOMBRE COMPLETO");
+          form.nombre.focus();
+          return;
+      }
+      if (form.telefono.value.trim().length === 0) {
+          alert("Escribe tu TELEFONO");
+          form.telefono.focus();
+          return;
+      }
+      if (form.paquete.value.trim().length === 0) {
+          alert("SELECCIONA tu PAQUETE");
+          form.paquete.focus();
+          return;
+      }
+      if (form.foto.value.trim().length === 0) {
+          alert("SUBE tu FOTO");
+          form.foto.focus();
+          return;
+      }
+      var patronTel = /^\d{10}$/;
+      if (!patronTel.test(form.telefono.value)) {
+          alert("El telefono debe tener exactamente 10 números");
+          form.telefono.focus();
+          return;
+      }
+      form.submit();
+    }
+</script>
+<script>
+    fetch('../pagina/header.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+    fetch('../pagina/footer.html')
+        .then(response => response.text())
+        .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+</script>
+</html>
