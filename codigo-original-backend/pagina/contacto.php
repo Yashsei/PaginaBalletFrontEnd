@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles.css">
+  <title>Contacto</title>
+</head>
+<body>
+  <?php  include "../header.php" ?>
+  <div class="contMain">
+    <h2>Contacto</h2>
+    <h3>Nos Ubicamos en</h3>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119177.42375778094!2d-89.79130268096927!3d21.020899476712856!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f5674160ef447b3%3A0x18bb866cde334e9e!2sESTUDIO%20DE%20DANZA%20LAYDA%20BUDIP!5e0!3m2!1ses-419!2smx!4v1779658394690!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    <h3>Telefono</h3>
+    <p>999 502 7153</p>
+    <h3>Contactanos con:</h3>
+    <div class="forms">
+      <form action="../datos/contactanos.php" method="POST" name="contactanos">
+        <p>Correo:</p>
+        <input type="email" name="mail" id="mail" placeholder="email@gmail.com">
+        <p>Telefono:</p>
+        <input type="tel" name="telefono" placeholder="999 999 999">
+        <p>Comentario:</p>
+        <textarea name="comentario" id="comentario">
+        </textarea>
+        <button type="button" class="btn_enviar" onclick="enviar()">Enviar</button>
+      </form>
+    </div>
+    <h3>Siguenos</h3>
+    <div class="redes2">
+      <a href="https://www.facebook.com/estudiodedanza.laydabudip" target="_blank"><img src="http://localhost/Ballet/img/face.png" alt="">
+
+      <a href="https://www.instagram.com/estudiodedanza.laydabudip/" target="_blank"><img src="http://localhost/Ballet/img/insta.png" alt=""></a>
+      </a>
+    </div>
+
+  </div>
+  <?php include "../footer.php" ?>
+  <script>
+    function enviar(){
+      var form = document.contactanos;
+      if (form.mail.value.trim().length === 0) {
+          alert("Escribe tu CORREO ");
+          form.mail.focus();
+          return;
+      }
+      if (form.telefono.value.trim().length === 0) {
+          alert("Escribe tu TELEFONO");
+          form.telefono.focus();
+          return;
+      }
+      if (form.comentario.value.trim().length === 0) {
+          alert("Escribe tu COMENTARIO");
+          form.comentario.focus();
+          return;
+      }
+      var patronTel = /^\d{10}$/;
+      if (!patronTel.test(form.telefono.value)) {
+          alert("El telefono debe tener exactamente 10 números");
+          form.telefono.focus();
+          return;
+      }
+      form.submit();
+    }
+  </script>
+</body>
+</html>

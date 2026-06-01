@@ -1,0 +1,144 @@
+* {
+  box-sizing:border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #FDF5E6;
+}
+.header {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  color: aliceblue;
+}
+.menuDash{
+  width: 180px;
+  margin: 20px;
+  padding: 10px;
+  background-color: #f5e1ce;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 5px;
+}
+.menuDash a{
+  width: 150px;
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px black solid;
+}
+.menuDash a:hover{
+  width: 150px;
+  display: block;
+  padding: 5px;
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px aliceblue solid;
+  background-color: aliceblue;
+  border-radius: 5px;
+}
+.contGeneral{
+  width: 70%;
+  display: inline-block;
+  margin: 30px;
+  text-align: center;
+  background-color: aliceblue;
+  padding: 20px;
+}
+.formu{
+  display: inline-block;
+  width: 40%;
+  margin: 30px 200px auto 200px;
+  padding: 20px;
+  text-align: center;
+  background-color: aliceblue;
+}
+form {
+  text-align: center;
+}
+.formu input,select{
+  display: block;
+  width: 225px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px #f5e1ce solid;
+  margin: 15px auto;
+}
+.elemento3{
+  margin: 5px 0 5px 0;
+  padding: 3px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+}
+.contGeneral table{
+  margin: auto;
+  padding: 10px;
+  border: 1px black solid;
+}
+.contGeneral th{
+  width: 180px;
+  background-color: #FF69B4;
+}
+.contGeneral td {
+  padding: 5px;
+  background-color: #E6CCEF;
+}
+.contGeneral a {
+  color: #FF69B4;
+  text-decoration: none;
+}
+.foto{
+  width: 100px;
+  height: auto;
+}
+.btn_enviar{
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  background-color: #FDF5E6;
+  border: 1px black solid;
+  color: blueviolet;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.btn_enviar:hover{
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  background-color: blueviolet;
+  border: 1px blueviolet solid;
+  color: #FDF5E6;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.btn_login{
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  background-color: #FDF5E6;
+  border: 1px black solid;
+  color: blueviolet;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.btn_login:hover{
+  display: block;
+  width: 200px;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+  background-color: blueviolet;
+  border: 1px blueviolet solid;
+  color: #FDF5E6;
+  font-weight: bold;
+  border-radius: 5px;
+}
