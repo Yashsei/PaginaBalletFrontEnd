@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Aviso - Grand jeté</title>
+</head>
+<body>
+  <div id="header-placeholder"></div>
+
+  <div class="contMain">
+    <h2>¡Aviso!</h2>
+    <div class="hrNos"></div>
+    <div class="contContacto">
+      <h3>Esta función no sirve.</h3>
+      <br>
+      <h3>Es de backend y en esta página solo se ve el frontend.</h3>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+
+  <script>
+    fetch('header.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('header-placeholder').innerHTML = data);
+
+    fetch('footer.html')
+      .then(response => response.text())
+      .then(data => document.getElementById('footer-placeholder').innerHTML = data);
+  </script>
+
+</body>
+</html>
